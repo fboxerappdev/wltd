@@ -40,16 +40,90 @@ ul{
 
 
 
+.menubar{
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  height:0;
+  .bg-menu{
+    background: #21741f none repeat scroll 0 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .menu-toggle{
+    color: #74be72;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    right: 70px;
+    text-align: center;
+    top: 40px;
+    width: 40px;
+    z-index: 11;
+  }
+  .navbar-main{
+    display: flex;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    bottom:100%;
+    overflow: hidden;
+    ul{
+      align-self: center;
+      display: table;
+      margin: 0 auto;
+      width:100%;
+      li{
+        text-align: center;
+        width:100%;
+        a{
+          color: #fff;
+          display: inline-block;
+          font-size: 37px;
+          font-weight: 400;
+          margin-bottom: 14px;
+          text-transform: uppercase;
+          width: 100%;
+          padding: 5px 0;
+          transition: all 0.4s ease 0s;
+          &.active{
+            color: #74be72;
+          }
+          &:hover{
+            color: #74be72;
+            background:#fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 header{
   background: #f6f6f6 none repeat scroll 0 0;
   display: flex;
   height: 100vh;
   overflow: hidden;
   width: 100%;
+
+
   .slider{
     bottom: 0;
     overflow: hidden;
     position: absolute;
+    img{
+      width: 100%;
+    }
     .bx-wrapper{
       img{
         width: 100%;
@@ -60,6 +134,7 @@ header{
         padding: 0;
         text-align: center !important;
         width: 100% !important;
+        z-index: 111;
         .bx-pager-item{
           a{
             background: #000 none repeat scroll 0 0;
@@ -89,7 +164,6 @@ header{
       width: 100px;
       img{
         width: 100%;
-
       }
     }
     h2{
@@ -122,9 +196,14 @@ header{
       margin: 24px auto 0;
       max-width: 1024px;
     }
-    a{
-      color:red;
-
+    span{
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 70px;
+      width: 35px;
+      img{
+        width: 100%;
+      }
     }
   }
 }
@@ -181,8 +260,49 @@ header{
         height: 310px;
         width: 25%;
         cursor: pointer;
+        position: relative;
         img{
          display:none;
+        }
+        .info{
+          background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+          height: 100%;
+          position: absolute;
+          width: 100%;
+          overflow: hidden;
+          &:extend(.transition);
+          a{
+            color: #fff;
+            font-size: 26px;
+            left: 50%;
+            margin-left: -10px;
+            position: absolute;
+            top: -50px;
+            &:extend(.transition);
+          }
+          span{
+            bottom:-50px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            left: 0;
+            position: absolute;
+            text-transform: uppercase;
+            width:100%;
+            text-align:center;
+            &:extend(.transition);
+          }
+        }
+        &:hover{
+          .info {
+            background: rgba(0, 0, 0, 0.9) none repeat scroll 0 0;
+            a{
+              top: 43%;
+            }
+            span{
+              bottom: 30px;
+            }
+          }
         }
       }
     }
@@ -218,21 +338,129 @@ header{
       padding: 17px 35px;
       text-transform: uppercase;
       word-spacing: 1px;
+      &:extend(.transition);
       i{
         margin-right:7px;
       }
+      &:hover{
+        background: #000 none repeat scroll 0 0;
+      }
+    }
+    img{
+      width: 100%;
     }
   }
   .work-body{
+    display: inline-block;
     margin: 50px 0;
     width: 100%;
-    img{
+    position: relative;
+    &:after{
+      border-bottom: 3px dotted #777777;
+      content: "";
+      height: 50%;
+      left: 0;
+      position: absolute;
       width: 100%;
+    }
+    .col{
+      float: left;
+      height: 240px;
+      position: relative;
+      width: 25%;
+
+      &:after{
+        background: #777777 none repeat scroll 0 0;
+        content: "";
+        height: 90%;
+        left: 33px;
+        position: absolute;
+        top: 0;
+        width: 1px;
+      }
+      &:before{
+        background: #fff none repeat scroll 0 0;
+        border: 1px solid #4f4f4f;
+        border-radius: 50%;
+        content: "";
+        height: 15px;
+        left: 26px;
+        margin-top: -9px;
+        position: absolute;
+        top: 50%;
+        width: 15px;
+        z-index: 11;
+      }
+      span{
+        background: #777777 none repeat scroll 0 0;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        height: 66px;
+        position: absolute;
+        text-align: center;
+        width: 66px;
+        z-index: 1;
+        i{
+          align-self: center;
+          color: #fff;
+          font-size: 26px;
+          margin: 0 auto;
+        }
+      }
+      .conv{
+        margin-left: 46px;
+        margin-top: 132px;
+        h3{
+          color: #000;
+          font-size: 16px;
+          font-weight: 700;
+          margin-bottom: 8px;
+        }
+        p{
+          color: #666666;
+          line-height: 1.4;
+          padding-right: 15px;
+        }
+      }
+      &:nth-child(2n){
+        span{
+          bottom:0;
+        }
+      }
+      &.col-1{
+        span{
+          background:#1AA399;
+        }
+
+      }
+      &.col-2{
+        .conv {
+          margin-top: -23px;
+        }
+        span{
+          background:#7CC57B;
+        }
+      }
+      &.col-3{
+        span{
+          background:#DA491C;
+        }
+      }
+      &.col-4{
+        .conv {
+          margin-top: -23px;
+        }
+        span{
+          background:#1AA399;
+        }
+      }
     }
   }
 }
 .app-full-box{
   background: #145f69 none repeat scroll 0 0;
+  overflow: hidden;
   .app-info{
     color: #fff;
     padding: 96px 0;
