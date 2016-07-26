@@ -114,9 +114,8 @@ header{
   display: flex;
   height: 100vh;
   overflow: hidden;
+  position: relative;
   width: 100%;
-
-
   .slider{
     bottom: 0;
     overflow: hidden;
@@ -240,7 +239,7 @@ header{
     font-weight: 300;
     line-height: 1.3;
     margin: 0 auto 17px;
-    width: 800px;
+    max-width: 800px;
   }
 }
 .wrapper{
@@ -252,7 +251,8 @@ header{
     display: table;
     margin: 0 auto;
     padding: 20px 0 40px;
-    width: 1570px;
+    max-width: 1570px;
+    width: 100%;
     ul{
       li{
         background: #ffffff none no-repeat scroll center center / cover ;
@@ -605,7 +605,7 @@ footer{
     a{
       color: #fff;
       font-size: 14px;
-      padding: 20px 11px;
+      padding: 20px 10px;
       text-transform: uppercase;
     }
   }
@@ -680,23 +680,283 @@ footer{
 
 
 @media (min-width: 0px) {
-	
+  header .slider-text .logo {
+    margin-bottom: 10px;
+    width: 50px;
+  }
+  header .slider-text h2 {
+    font-size: 37px;
+    margin-bottom: 42px;
+  }
+  header .slider-text h2::before {
+    bottom: -22px;
+  }
+  header .slider-text span {
+    margin-top: 11px;
+  }
+  .menubar .navbar-main ul li a {
+    font-size: 30px;
+  }
+  .wrapper .index-gallery ul li {
+    height: 210px;
+    width: 33.33%;
+  }
+  header .slider-text p {
+    font-size: 16px;
+  }
+  .app-full-box .app-img {
+    width: 360px;
+  }
+  .app-full-box .app-info {
+    padding: 56px 0;
+  }
+  .center-heading {
+    padding: 20px 0;
+  }
+  .work-box .work-body .col .conv {
+    margin-top: 74px;
+  }
+  .work-box .work-body::after {
+    display: none;
+  }
+  .out-clients a {
+    padding: 5px 10px;
+  }
+  .work-box .work-heading {
+    margin-top: 20px;
+  }
+  .app-full-box .app-info h3 {
+    font-size: 40px;
+  }
+  .app-full-box .app-info a {
+    padding: 13px 30px;
+  }
+  .app-full-box .app-info span {
+    font-size: 22px;
+  }
+  .twitter {
+    padding: 50px 0;
+  }
 }
-@media only screen and (min-width: 0px) and (max-width: 767px) {
 
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  header .slider-text p {
+    display: none;
+  }
+
+  header .slider-text h2::before {
+    display:none
+  }
+  header .slider-text span {
+    display: none;
+  }
+  header .slider-text h2 {
+    font-size: 27px;
+    margin-bottom: 32px;
+  }
+  .menubar .menu-toggle {
+    right: 30px;
+    top: 20px;
+  }
+  .center-heading h2 {
+    font-size: 28px;
+  }
+  .wrapper .index-gallery ul li {
+    height: 210px;
+    width: 50%;
+  }
+  .wrapper .index-gallery {
+    padding: 0;
+  }
+  .wrapper {
+    padding: 10px 0;
+  }
+  .work-box .work-body .col {
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  .out-clients a {
+    width: 32%;
+  }
+  .twitter h5 {
+    font-size: 30px;
+  }
+  .center-heading h2 {
+    letter-spacing: 2px;
+    word-spacing: 5px;
+  }
+
+  .menubar .navbar-main ul li a {
+    font-size: 26px;
+  }
 }
 @media only screen and (min-width: 0px) and (max-width: 480px) {
-	
+  header .slider-text h2 {
+    margin-bottom: 2px;
+  }
+  header .slider .bx-wrapper .bx-pager{
+    display:none;
+  }
+  .wrapper .index-gallery ul li {
+    height: 230px;
+    width: 100%;
+  }
+  .work-box .work-body .col {
+    width: 100%;
+  }
+  .work-box .work-body .col {
+    height: 172px;
+  }
+  .work-box .work-body .col.col-2 .conv,
+  .work-box .work-body .col.col-4 .conv {
+    margin-top: 74px;
+  }
+  .work-box .work-body .col:nth-child(2n) span {
+    bottom: initial;
+  }
+  .work-box .work-body {
+    margin: 20px 0 0;
+  }
+  .app-full-box .app-info h3 {
+    font-size: 33px;
+  }
+  .app-full-box .app-info a {
+    padding: 9px 19px;
+  }
+  .app-full-box .app-img {
+    width: 100%;
+  }
+  .out-clients a {
+    width: 45%;
+  }
+  .twitter h5 {
+    font-size: 22px;
+  }
+  .join-box {
+    padding: 70px 0;
+  }
+  .work-box .work-heading {
+    margin-top: 0px;
+  }
 }
-@media (min-width: 992px) {	
-	
+
+@media (min-width: 992px) {
+  header .slider-text .logo {
+    width: 62px;
+    margin-bottom: 30px;
+  }
+  header .slider-text h2 {
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
+  header .slider-text h2::before {
+    bottom: -30px;
+  }
+  header .slider-text p {
+    font-size: 18px;
+  }
+  header .slider-text span {
+    margin-top: 40px;
+  }
+  .center-heading {
+    padding: 30px 0;
+  }
+  .wrapper .index-gallery ul li {
+    height: 270px;
+    width: 33.33%;
+  }
+  .work-box .work-body .col .conv {
+    margin-top: 132px;
+  }
+  .work-box .work-body::after {
+    display: block;
+  }
+  .out-clients a {
+    padding: 5px 40px;
+  }
+  .work-box .work-heading {
+    margin-top: 50px;
+  }
+  .app-full-box .app-img {
+    width: 440px;
+  }
+  .app-full-box .app-info h3 {
+    font-size: 50px;
+  }
+  .app-full-box .app-info a {
+    padding: 17px 50px;
+  }
+  .app-full-box .app-info span {
+    font-size: 25px;
+  }
+  .app-full-box .app-info {
+    padding: 74px 0;
+  }
+  .twitter {
+    padding: 70px 0;
+  }
 }
 @media (min-width: 1200px) {
-
-	
-	
+  header .slider-text .logo {
+    width: 72px;
+    margin-bottom: 40px;
+  }
+  header .slider-text h2 {
+    font-size: 60px;
+    margin-bottom: 70px;
+  }
+  header .slider-text span {
+    margin-top: 40px;
+  }
+  .menubar .navbar-main ul li a {
+    font-size: 30px;
+  }
+  .wrapper .index-gallery ul li {
+    height: 270px;
+    width: 25%;
+  }
+  header .slider-text h2::before {
+    bottom: -40px;
+  }
+  header .slider-text p {
+    font-size: 20px;
+  }
+  .app-full-box .app-img {
+    width: 496px;
+  }
+  .app-full-box .app-info {
+    padding: 96px 0;
+  }
+  .twitter {
+    padding: 80px 0;
+  }
 }
-
+@media (min-width: 1500px) {
+  header .slider-text .logo {
+    width: 100px;
+    margin-bottom: 70px;
+  }
+  header .slider-text h2 {
+    font-size: 74px;
+    margin-bottom: 90px;
+  }
+  header .slider-text span {
+    margin-top: 70px;
+  }
+  .menubar .navbar-main ul li a {
+    font-size: 37px;
+  }
+  .wrapper .index-gallery ul li {
+    height: 310px;
+  }
+  .center-heading {
+    padding: 50px 0;
+  }
+  .twitter {
+    padding: 90px 0;
+  }
+}
 
 
 
