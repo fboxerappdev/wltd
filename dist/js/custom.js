@@ -22,6 +22,8 @@ $(document).ready(function(){
 
     $(".menu-toggle").click(function(){
         if(status){
+            $(this).find("i").removeClass("fa-bars");
+            $(this).find("i").addClass("fa-times");
             $(".menubar").css("height","100%");
             $(".navbar-main").stop(true,false).animate({
                 bottom:"0"
@@ -33,6 +35,8 @@ $(document).ready(function(){
             status = false;
         }
         else{
+            $(this).find("i").removeClass("fa-times");
+            $(this).find("i").addClass("fa-bars");
             $(".navbar-main").stop(true,false).animate({
                 bottom:"100%"
             },400);
