@@ -118,12 +118,36 @@ header{
   width: 100%;
   max-height:0;
 
+  &.subpage{
+    .logo{
+      width: 70px !important;
+    }
+    max-height:200px;
+    height: 30vh;
+    img{
+      width:100%;
+      display: block;
+      position: absolute;
+      max-width: 100%;
+    }
+    .subpage-top{
+      margin: 0 auto;
+      max-width: 1500px;
+      text-align: left;
+      h3{
+        color: #fff;
+        display: inline-block;
+        margin: 70px 0 0;
+        text-transform: uppercase;
+        width: 100%;
+      }
+    }
+  }
   .slider{
     bottom: 0;
     overflow: hidden;
     position: absolute;
     background: #444 none repeat scroll 0 0;
-
     img{
       width: 100%;
     }
@@ -166,6 +190,7 @@ header{
       display: inline-block;
       margin-bottom: 70px;
       width: 100px;
+      position: relative;
       img{
         width: 100%;
       }
@@ -676,6 +701,84 @@ footer{
 }
 
 
+.main-detail-section{
+  display: inline-block;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+  h4{
+    color: #646262;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+  h5{
+    color: #646262;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0 0 40px;
+  }
+  ul{
+    li{
+      float: left;
+      padding: 10px 30px;
+      text-align: center;
+      width: 33.33%;
+      img{
+        margin-bottom: 10px;
+        width: 100px;
+      }
+      span{
+        display: inline-block;
+        font-size: 20px;
+        margin: 10px 0 30px;
+        text-transform: uppercase;
+        width: 100%;
+      }
+      p{
+        color: #676767;
+      }
+    }
+  }
+  .numbers{
+    co:rd;
+    &>div{
+      float: left;
+      padding: 30px 10px;
+      width: 25%;
+      position: relative;
+      &:before{
+        background: #ececec none repeat scroll 0 0;
+        content: "";
+        height: 72px;
+        position: absolute;
+        right: 0;
+        top: 66px;
+        transform: rotate(31deg);
+        width: 2px;
+      }
+      &:last-child
+      {
+        &:before{
+          display:none;
+        }
+      }
+      span{
+        color: #606060;
+        font-family: Georgia;
+        font-size: 58px
+      }
+      p{
+        color: #b2b2b2;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 18px;
+      }
+    }
+  }
+}
+
 
 
 
@@ -742,6 +845,9 @@ footer{
   .twitter {
     padding: 50px 0;
   }
+  .main-detail-section h5 {
+    font-size: 23px;
+  }
 }
 
 
@@ -795,6 +901,18 @@ footer{
   .menubar .navbar-main ul li a {
     font-size: 26px;
   }
+  .main-detail-section ul li {
+    width: 100%;
+  }
+  .main-detail-section .numbers > div {
+    width: 50%;
+  }
+
+
+  .main-detail-section .numbers > div:nth-child(2n):before {
+    display: none;
+  }
+
 }
 @media only screen and (min-width: 0px) and (max-width: 480px) {
   header .slider-text h2 {
@@ -843,6 +961,15 @@ footer{
   }
   .work-box .work-heading {
     margin-top: 0;
+  }
+  .main-detail-section h5 {
+    font-size: 16px;
+  }
+  .main-detail-section .numbers > div {
+    width: 100%;
+  }
+  .main-detail-section .numbers > div:before {
+    display: none;
   }
 }
 
@@ -901,6 +1028,9 @@ footer{
   .twitter {
     padding: 70px 0;
   }
+  .main-detail-section h5 {
+    font-size: 26px;
+  }
 }
 @media (min-width: 1200px) {
   header .slider-text .logo {
@@ -936,6 +1066,9 @@ footer{
   .twitter {
     padding: 80px 0;
   }
+  .main-detail-section h5 {
+    font-size: 30px;
+  }
 }
 @media (min-width: 1500px) {
   header .slider-text .logo {
@@ -960,6 +1093,9 @@ footer{
   }
   .twitter {
     padding: 90px 0;
+  }
+  .main-detail-section h5 {
+    font-size: 35px;
   }
 }
 
