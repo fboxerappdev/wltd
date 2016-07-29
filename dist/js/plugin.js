@@ -22,7 +22,7 @@
 			},
 			onInheritNav:function(){
 				return;
-			},
+			}
         }, opt );
 		
 		$(window).scroll(function(){

@@ -73,9 +73,19 @@ $(document).ready(function(){
 
 
     var complete = document.getElementById("slideimg").complete;
+
     if(complete){
         var hi = $("#slideimg").height();
         $("header").css("max-height",hi);
+
+        setTimeout(function(){
+            var hi = $("#slideimg").height();
+            $("header").css("max-height",hi);
+        },300);
+
+
+
+
         clearInterval(myVar);
     }
     else{
@@ -84,6 +94,47 @@ $(document).ready(function(){
             $("header").css("max-height",hi);
         },1);
     }
+
+
+
+
+
+    function numbers1(ele){
+        var text = ele.attr("data-value");
+        var i = 0;
+        var myVar1 = setInterval(function(){
+            if(i<text){
+                ele.text(i);
+                i++;
+            }
+            else{
+                clearInterval(myVar1);
+            }
+        },10);
+    }
+    var eletop = $(".numbers").offset().top;
+    var winheight = $(window).height();
+    var status1 = true;
+    function scrool(){
+        wintop = $(this).scrollTop();
+        if(wintop > (eletop - (winheight*.75)) && status1){
+            $(".numbers div").each(function(){
+                var ele= $(this).find("span");
+                numbers1(ele);
+            });
+            status1 = false;
+        }
+    }
+    $(window).load(function(){
+        $(window).scroll(function(){
+            scrool();
+        });
+        scrool();
+    });
+
+
+
+
 
 });
 

@@ -4,7 +4,8 @@
 }
 .blockin,
 .wrapper,
-.work-box .work-heading {
+.work-box .work-heading,
+.main-detail-section .numbers {
   display: inline-block;
   width: 100%;
 }
@@ -662,6 +663,12 @@ footer .footer-right .social-icons a {
 footer .footer-right .social-icons a:hover {
   background: #fff none repeat scroll 0 0;
 }
+.bx-loading {
+  background: red;
+}
+.header .slider .bx-wrapper .bx-viewport {
+  background: red;
+}
 .main-detail-section {
   display: inline-block;
   padding: 40px 0;
@@ -700,9 +707,6 @@ footer .footer-right .social-icons a:hover {
 }
 .main-detail-section ul li p {
   color: #676767;
-}
-.main-detail-section .numbers {
-  co: rd;
 }
 .main-detail-section .numbers > div {
   float: left;
