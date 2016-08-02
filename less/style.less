@@ -119,28 +119,13 @@ header{
   max-height:0;
 
   &.subpage{
-    .logo{
-      width: 70px !important;
-    }
-    max-height:200px;
-    height: 30vh;
-    img{
+
+      height: 70vh;
+      &>img{
       width:100%;
       display: block;
       position: absolute;
       max-width: 100%;
-    }
-    .subpage-top{
-      margin: 0 auto;
-      max-width: 1500px;
-      text-align: left;
-      h3{
-        color: #fff;
-        display: inline-block;
-        margin: 70px 0 0;
-        text-transform: uppercase;
-        width: 100%;
-      }
     }
   }
   .slider{
@@ -275,8 +260,7 @@ header{
 .wrapper{
   &:extend(.blockin);
   background: #f6f6f6 none repeat scroll 0 0;
-  padding: 10px 0 70px;
-
+  padding: 30px 0 70px;
   .index-gallery{
     display: table;
     margin: 0 auto;
@@ -619,6 +603,70 @@ header{
     width: 100%;
   }
 }
+.about-box{
+  background: #f6f6f6 none repeat scroll 0 0;
+  margin: -10px 0 40px;
+  padding: 30px 50px;
+  h2{
+    font-size: 35px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin: 6px 0 20px;
+    word-spacing: 14px;
+  }
+  h5{
+    color: #737373;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  p{
+    color: #787878;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+}
+.our-team{
+  padding: 50px;
+  h2{
+    &:extend(.about-box h2);
+    margin-bottom: 40px;
+  }
+  .ful-box{
+    display: inline-block;
+    margin-bottom: 27px;
+    width: 100%;
+    .img-box{
+      border-radius: 50%;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
+    }
+    .team-info{
+      padding: 20px 10px;
+      h3{
+        font-size: 26px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        margin-bottom: 0;
+        word-spacing: 10px;
+      }
+      h4{
+        font-size: 17px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        margin: 0 0 7px;
+      }
+      p{
+        font-size: 15px;
+      }
+    }
+  }
+
+}
+
+
+
 footer{
   background: #145f69 none repeat scroll 0 0;
   padding: 50px 0;

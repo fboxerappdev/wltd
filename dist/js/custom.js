@@ -84,8 +84,6 @@ $(document).ready(function(){
         },300);
 
 
-
-
         clearInterval(myVar);
     }
     else{
@@ -103,7 +101,7 @@ $(document).ready(function(){
         var text = ele.attr("data-value");
         var i = 0;
         var myVar1 = setInterval(function(){
-            if(i<text){
+            if(i<=text){
                 ele.text(i);
                 i++;
             }
